@@ -55,6 +55,7 @@
                     <navigationItem key="navigationItem" id="kv2-6Y-Tak"/>
                     <connections>
                         <outlet property="TableView" destination="Peo-HC-cAv" id="3nw-Or-Tx0"/>
+                        <outlet property="tableView" destination="Peo-HC-cAv" id="hEP-cj-Idg"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
