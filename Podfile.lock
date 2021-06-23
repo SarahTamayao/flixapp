@@ -14,17 +14,21 @@ PODS:
   - AFNetworking/Serialization (4.0.1)
   - AFNetworking/UIKit (4.0.1):
     - AFNetworking/NSURLSession
+  - MBProgressHUD (1.2.0)
 
 DEPENDENCIES:
   - AFNetworking
+  - MBProgressHUD (~> 1.2.0)
 
 SPEC REPOS:
   trunk:
     - AFNetworking
+    - MBProgressHUD
 
 SPEC CHECKSUMS:
   AFNetworking: 7864c38297c79aaca1500c33288e429c3451fdce
+  MBProgressHUD: 3ee5efcc380f6a79a7cc9b363dd669c5e1ae7406
 
-PODFILE CHECKSUM: 1baacffe185895bc154efd96cd803bf15cb48140
+PODFILE CHECKSUM: 5c413fbb38f23555a772fe26441518cdec238b9c
 
 COCOAPODS: 1.10.1

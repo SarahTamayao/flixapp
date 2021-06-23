@@ -7,6 +7,7 @@ target 'flixapp' do
 
   # Pods for flixapp
 pod 'AFNetworking'
+pod 'MBProgressHUD', '~> 1.2.0'
 
 
   target 'flixappTests' do
