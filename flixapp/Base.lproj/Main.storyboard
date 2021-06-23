@@ -151,43 +151,51 @@
         <scene sceneID="PGj-SO-c2K">
             <objects>
                 <viewController id="xk9-7a-m3z" customClass="DetailsViewController" sceneMemberID="viewController">
-                    <scrollView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" alwaysBounceVertical="YES" id="pca-Bm-qoX">
+                    <view key="view" contentMode="scaleToFill" id="uqg-CF-o08">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="kP1-j8-FON">
-                                <rect key="frame" x="0.0" y="-88" width="414" height="311"/>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" alwaysBounceVertical="YES" id="vUF-3Z-t6S">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="LTI-nx-egq">
-                                <rect key="frame" x="20" y="111" width="139" height="190"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ifM-3Y-GMS">
-                                <rect key="frame" x="20" y="341" width="374" height="39"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="20"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Luca" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="q6d-Kx-UAN">
-                                <rect key="frame" x="167" y="252" width="202" height="49"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="13j-bc-A89">
+                                        <rect key="frame" x="0.0" y="-88" width="414" height="311"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    </imageView>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="YE2-3Z-eW8">
+                                        <rect key="frame" x="20" y="111" width="139" height="190"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RBD-fu-ln2">
+                                        <rect key="frame" x="20" y="341" width="374" height="39"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" weight="light" pointSize="20"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Luca" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sUi-pN-u1r">
+                                        <rect key="frame" x="167" y="252" width="202" height="49"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <viewLayoutGuide key="safeArea" id="w7l-pt-h9e"/>
+                                <viewLayoutGuide key="contentLayoutGuide" id="1yn-ez-sy2"/>
+                                <viewLayoutGuide key="frameLayoutGuide" id="5PI-40-BVm"/>
+                            </scrollView>
                         </subviews>
-                        <viewLayoutGuide key="safeArea" id="o52-Fr-aaH"/>
-                        <viewLayoutGuide key="contentLayoutGuide" id="W6w-qP-bRw"/>
-                        <viewLayoutGuide key="frameLayoutGuide" id="wyV-Zw-ete"/>
-                    </scrollView>
+                        <viewLayoutGuide key="safeArea" id="ghT-zZ-RYU"/>
+                        <color key="backgroundColor" systemColor="labelColor"/>
+                    </view>
                     <navigationItem key="navigationItem" id="4a1-7B-oMK"/>
                     <connections>
-                        <outlet property="backdropView" destination="kP1-j8-FON" id="dRl-8H-0AH"/>
-                        <outlet property="posterView" destination="LTI-nx-egq" id="p4d-na-Aua"/>
-                        <outlet property="synopsisLabel" destination="ifM-3Y-GMS" id="dwB-4F-awy"/>
-                        <outlet property="titleLabel" destination="q6d-Kx-UAN" id="ak4-TX-rPT"/>
+                        <outlet property="backdropView" destination="13j-bc-A89" id="lPu-nL-nAs"/>
+                        <outlet property="posterView" destination="YE2-3Z-eW8" id="F0H-dV-g66"/>
+                        <outlet property="synopsisLabel" destination="RBD-fu-ln2" id="mns-DR-1ep"/>
+                        <outlet property="titleLabel" destination="sUi-pN-u1r" id="LOP-nl-gai"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zkN-Ek-jY1" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
