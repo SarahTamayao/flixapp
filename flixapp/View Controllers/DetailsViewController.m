@@ -7,6 +7,7 @@
 
 #import "DetailsViewController.h"
 #import "UIImageView+AFNetworking.h"
+#import "TrailerViewController.h"
 
 @interface DetailsViewController ()
 @property (weak, nonatomic) IBOutlet UIImageView *backdropView;
@@ -42,15 +43,24 @@
     
     
 }
+- (IBAction)didTap:(UITapGestureRecognizer *)sender {
+    [self performSegueWithIdentifier:@"TrailerOpen" sender:self];
+}
 
-/*
 #pragma mark - Navigation
 
 // In a storyboard-based application, you will often want to do a little preparation before navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     // Get the new view controller using [segue destinationViewController].
     // Pass the selected object to the new view controller.
+    if([segue.identifier isEqualToString:@"TrailerOpen"]) {
+        TrailerViewController *trailerViewController = [segue destinationViewController];
+        NSLog(@"%@", self.movie[@"id"]);
+    
+        trailerViewController.movie = self.movie;
+    }
+    
 }
-*/
+
 
 @end
