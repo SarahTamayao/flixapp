@@ -27,13 +27,64 @@
     NSString *fullPosterURL = [baseURLString stringByAppendingString:posterURLString];
     
     NSURL *posterURL = [NSURL URLWithString:fullPosterURL];
-    [self.posterView setImageWithURL:posterURL];
+    NSURLRequest *posterRequest = [NSURLRequest requestWithURL:posterURL];
+    __weak DetailsViewController *weakSelf = self;
+    self.posterView.image = nil;
+    [self.posterView setImageWithURLRequest:posterRequest placeholderImage:nil
+                                    success:^(NSURLRequest *imageRequest, NSHTTPURLResponse *imageResponse, UIImage *image) {
+                                        
+                                        // imageResponse will be nil if the image is cached
+                                        if (imageResponse) {
+                                            NSLog(@"Image was NOT cached, fade in image");
+                                            weakSelf.posterView.alpha = 0.0;
+                                            weakSelf.posterView.image = image;
+                                            
+                                            //Animate UIImageView back to alpha 1 over 0.3sec
+                                            [UIView animateWithDuration:0.3 animations:^{
+                                                weakSelf.posterView.alpha = 1.0;
+                                            }];
+                                        }
+                                        else {
+                                            NSLog(@"Image was cached so just update the image");
+                                            weakSelf.posterView.image = image;
+                                        }
+                                    }
+                                    failure:^(NSURLRequest *request, NSHTTPURLResponse * response, NSError *error) {
+                                        // do something for the failure condition
+                                    }];
     
     NSString *backdropURLString = self.movie[@"backdrop_path"];
     NSString *fullBackdropURL = [baseURLString stringByAppendingString:backdropURLString];
     
-    NSURL *backdropURL = [NSURL URLWithString:fullBackdropURL];
-    [self.backdropView setImageWithURL:backdropURL];
+    //NSURL *backdropURL = [NSURL URLWithString:fullBackdropURL];
+    //[self.backdropView setImageWithURL:backdropURL];
+    
+    NSURL *backdropURL = [NSURL URLWithString:fullPosterURL];
+    NSURLRequest *backdropRequest = [NSURLRequest requestWithURL:backdropURL];
+    //__weak DetailsViewController *weakSelf1 = self;
+    self.backdropView.image = nil;
+    [self.backdropView setImageWithURLRequest:backdropRequest placeholderImage:nil
+                                    success:^(NSURLRequest *imageRequest, NSHTTPURLResponse *imageResponse, UIImage *image) {
+                                        
+                                        // imageResponse will be nil if the image is cached
+                                        if (imageResponse) {
+                                            NSLog(@"Image was NOT cached, fade in image");
+                                            weakSelf.backdropView.alpha = 0.0;
+                                            weakSelf.backdropView.image = image;
+                                            
+                                            //Animate UIImageView back to alpha 1 over 0.3sec
+                                            [UIView animateWithDuration:0.3 animations:^{
+                                                weakSelf.backdropView.alpha = 1.0;
+                                            }];
+                                        }
+                                        else {
+                                            NSLog(@"Image was cached so just update the image");
+                                            weakSelf.backdropView.image = image;
+                                        }
+                                    }
+                                    failure:^(NSURLRequest *request, NSHTTPURLResponse * response, NSError *error) {
+                                        // do something for the failure condition
+                                    }];
     
     self.titleLabel.text = self.movie[@"title"];
     self.synopsisLabel.text = self.movie[@"overview"];
