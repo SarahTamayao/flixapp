@@ -78,11 +78,11 @@
             </objects>
             <point key="canvasLocation" x="-794" y="287"/>
         </scene>
-        <!--Item-->
+        <!--Collection-->
         <scene sceneID="fJq-1V-fsP">
             <objects>
                 <navigationController id="bch-LV-hzj" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="vJq-Us-WoG"/>
+                    <tabBarItem key="tabBarItem" title="Collection" id="vJq-Us-WoG"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="83t-Jc-6N7">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -95,7 +95,7 @@
             </objects>
             <point key="canvasLocation" x="1539" y="-445"/>
         </scene>
-        <!--Movies Grid View Controller-->
+        <!--Collection-->
         <scene sceneID="0U8-iI-1de">
             <objects>
                 <viewController id="EA1-yN-Kgc" customClass="MoviesGridViewController" sceneMemberID="viewController">
@@ -130,6 +130,7 @@
                                         <size key="customSize" width="111" height="201"/>
                                         <connections>
                                             <outlet property="posterView" destination="1Fg-j5-BGA" id="obd-9a-Pbh"/>
+                                            <segue destination="xk9-7a-m3z" kind="show" id="15s-3f-cdz"/>
                                         </connections>
                                     </collectionViewCell>
                                 </cells>
@@ -138,7 +139,7 @@
                         <viewLayoutGuide key="safeArea" id="WMb-9g-zQC"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
-                    <navigationItem key="navigationItem" id="YWj-mF-WTI"/>
+                    <navigationItem key="navigationItem" title="Collection" id="YWj-mF-WTI"/>
                     <connections>
                         <outlet property="collectionView" destination="YD4-bP-Fe0" id="SUL-F6-2cr"/>
                     </connections>
@@ -240,6 +241,9 @@
             <point key="canvasLocation" x="-86" y="-444"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="15s-3f-cdz"/>
+    </inferredMetricsTieBreakers>
     <resources>
         <systemColor name="labelColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
