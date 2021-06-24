@@ -15,7 +15,9 @@
 @property (weak, nonatomic) IBOutlet UIActivityIndicatorView *activityIndicator;
 
 @property (nonatomic, strong) NSArray *movies;
+@property (nonatomic, strong) NSArray *filtermovies;
 @property (nonatomic, strong) UIRefreshControl *refreshControl;
+@property (nonatomic,strong) IBOutlet UISearchBar *searchBar;
 
 @end
 
@@ -27,6 +29,11 @@
     
     self.tableView.dataSource = self;
     self.tableView.delegate = self;
+    self.searchBar = [[UISearchBar alloc] init];
+    self.searchBar.delegate = self;
+    [self.searchBar sizeToFit];
+    self.navigationItem.titleView = self.searchBar;
+      
     [self.activityIndicator startAnimating];
     [self fetchMovies];
     
@@ -63,6 +70,7 @@
                
                NSLog(@"%@", dataDictionary);
                self.movies = dataDictionary[@"results"];
+               self.filtermovies = self.movies;
                for (NSDictionary *movie in self.movies){
                    NSLog(@"%@",movie[@"title"]);
                }
@@ -81,13 +89,13 @@
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
-    return self.movies.count;
+    return self.filtermovies.count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     MovieCell *cell =(MovieCell *) [tableView dequeueReusableCellWithIdentifier:@"MovieCell" forIndexPath:indexPath];
     
-    NSDictionary *movie = self.movies[indexPath.row];
+    NSDictionary *movie = self.filtermovies[indexPath.row];
     cell.titleLabel.text = movie[@"title"];
     cell.synopsisLabel.text = movie[@"overview"];
     
@@ -102,6 +110,30 @@
     return cell;
 }
 
+- (void) searchBar:(UISearchBar *) searchBar textDidChange:(nonnull NSString *)searchText{
+    if (searchText.length != 0){
+        
+        NSPredicate *predicate = [NSPredicate predicateWithBlock:^BOOL(NSDictionary *evaluatedObject, NSDictionary *bindings) {
+            return [evaluatedObject[@"title"] containsString:searchText];
+        }];
+        self.filtermovies = [self.movies filteredArrayUsingPredicate:predicate];
+    }
+    else{
+        self.filtermovies = self.movies;
+    }
+    [self.tableView reloadData];
+    
+}
+- (void)searchBarTextDidBeginEditing:(UISearchBar *)searchBar {
+    self.searchBar.showsCancelButton = YES;
+}
+- (void)searchBarCancelButtonClicked:(UISearchBar *)searchBar {
+    self.searchBar.showsCancelButton = NO;
+    self.searchBar.text = @"";
+    [self.searchBar resignFirstResponder];
+}
+
+
 #pragma mark - Navigation
 
 // In a storyboard-based application, you will often want to do a little preparation before navigation
@@ -110,7 +142,7 @@
     // Pass the selected object to the new view controller.
     UITableViewCell *tappedCell = sender;
     NSIndexPath *indexPath = [self.tableView indexPathForCell:tappedCell];
-    NSDictionary *movie = self.movies[indexPath.row];
+    NSDictionary *movie = self.filtermovies[indexPath.row];
     DetailsViewController *detailViewController = [segue destinationViewController];
     detailViewController.movie = movie;
     //NSLog(@"Tapping on a movie!");
