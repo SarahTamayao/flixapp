@@ -14,7 +14,9 @@
 @property (nonatomic, strong) NSArray *movies;
 @property (nonatomic, strong) UIRefreshControl *refreshControl;
 @property (weak, nonatomic) IBOutlet UICollectionView *collectionView;
+@property (nonatomic, strong) NSArray *filtermovies;
 
+@property (nonatomic,strong) IBOutlet UISearchBar *searchBar;
 
 @end
 
@@ -25,6 +27,10 @@
     // Do any additional setup after loading the view.
     self.collectionView.dataSource = self;
     self.collectionView.delegate = self;
+    self.searchBar = [[UISearchBar alloc] init];
+    self.searchBar.delegate = self;
+    [self.searchBar sizeToFit];
+    self.navigationItem.titleView = self.searchBar;
     [self fetchMovies];
     
     UICollectionViewFlowLayout *layout = (UICollectionViewFlowLayout *) self.collectionView.collectionViewLayout;
@@ -36,6 +42,9 @@
     CGFloat itemWidth = (self.collectionView.frame.size.width-layout.minimumInteritemSpacing*(postersPerLine-1))/postersPerLine;
     CGFloat itemHeight = itemWidth*1.5;
     layout.itemSize = CGSizeMake(itemWidth, itemHeight);
+    self.refreshControl = [[UIRefreshControl alloc] init];
+    [self.refreshControl addTarget:self action:@selector(fetchMovies) forControlEvents:UIControlEventValueChanged];
+    [self.collectionView insertSubview: self.refreshControl atIndex:0];
     
 }
 
@@ -66,6 +75,7 @@
                
                NSLog(@"%@", dataDictionary);
                self.movies = dataDictionary[@"results"];
+               self.filtermovies = self.movies;
                for (NSDictionary *movie in self.movies){
                    NSLog(@"%@",movie[@"title"]);
                }
@@ -81,6 +91,28 @@
         //[self.activityIndicator stopAnimating];
        }];
     [task resume];
+}
+- (void) searchBar:(UISearchBar *) searchBar textDidChange:(nonnull NSString *)searchText{
+    if (searchText.length != 0){
+        
+        NSPredicate *predicate = [NSPredicate predicateWithBlock:^BOOL(NSDictionary *evaluatedObject, NSDictionary *bindings) {
+            return [evaluatedObject[@"title"] containsString:searchText];
+        }];
+        self.filtermovies = [self.movies filteredArrayUsingPredicate:predicate];
+    }
+    else{
+        self.filtermovies = self.movies;
+    }
+    [self.collectionView reloadData];
+    
+}
+- (void)searchBarTextDidBeginEditing:(UISearchBar *)searchBar {
+    self.searchBar.showsCancelButton = YES;
+}
+- (void)searchBarCancelButtonClicked:(UISearchBar *)searchBar {
+    self.searchBar.showsCancelButton = NO;
+    self.searchBar.text = @"";
+    [self.searchBar resignFirstResponder];
 }
 
 
@@ -102,7 +134,7 @@
 
 - (nonnull __kindof UICollectionViewCell *)collectionView:(nonnull UICollectionView *)collectionView cellForItemAtIndexPath:(nonnull NSIndexPath *)indexPath {
     MovieCollectionCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"MovieCollectionCell" forIndexPath:indexPath];
-    NSDictionary *movie = self.movies[indexPath.item];
+    NSDictionary *movie = self.filtermovies[indexPath.item];
     NSString *baseURLString = @"https://image.tmdb.org/t/p/w500";
     NSString *posterURLString = movie[@"poster_path"];
     NSString *fullPosterURL = [baseURLString stringByAppendingString:posterURLString];
@@ -114,7 +146,7 @@
 }
 
 - (NSInteger)collectionView:(nonnull UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
-    return self.movies.count;
+    return self.filtermovies.count;
 }
 
 
