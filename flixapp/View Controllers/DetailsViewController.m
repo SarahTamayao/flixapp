@@ -9,6 +9,7 @@
 #import "UIImageView+AFNetworking.h"
 #import "TrailerViewController.h"
 
+
 @interface DetailsViewController ()
 @property (weak, nonatomic) IBOutlet UIImageView *backdropView;
 @property (weak, nonatomic) IBOutlet UIImageView *posterView;
@@ -59,7 +60,7 @@
     //NSURL *backdropURL = [NSURL URLWithString:fullBackdropURL];
     //[self.backdropView setImageWithURL:backdropURL];
     
-    NSURL *backdropURL = [NSURL URLWithString:fullPosterURL];
+    NSURL *backdropURL = [NSURL URLWithString:fullBackdropURL];
     NSURLRequest *backdropRequest = [NSURLRequest requestWithURL:backdropURL];
     //__weak DetailsViewController *weakSelf1 = self;
     self.backdropView.image = nil;
@@ -93,10 +94,12 @@
     [self.synopsisLabel sizeToFit];
     
     
+    
 }
 - (IBAction)didTap:(UITapGestureRecognizer *)sender {
     [self performSegueWithIdentifier:@"TrailerOpen" sender:self];
 }
+
 
 #pragma mark - Navigation
 

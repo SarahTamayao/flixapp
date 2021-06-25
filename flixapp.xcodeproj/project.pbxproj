@@ -23,6 +23,7 @@
 		AA285A6B2683F09000580159 /* MoviesGridViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AA285A6A2683F09000580159 /* MoviesGridViewController.m */; };
 		AA285A6E2683F2F700580159 /* MovieCollectionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = AA285A6D2683F2F700580159 /* MovieCollectionCell.m */; };
 		AA37D7F7268515A700C1122A /* TrailerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AA37D7F6268515A700C1122A /* TrailerViewController.m */; };
+		AA37D7FA26854D7D00C1122A /* BPostViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AA37D7F926854D7D00C1122A /* BPostViewController.m */; };
 		C8B9400ADDC7BFF291004367 /* Pods_flixapp_flixappUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7A1DE637DF10C992036E83BE /* Pods_flixapp_flixappUITests.framework */; };
 /* End PBXBuildFile section */
 
@@ -79,6 +80,8 @@
 		AA285A6D2683F2F700580159 /* MovieCollectionCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MovieCollectionCell.m; sourceTree = "<group>"; };
 		AA37D7F5268515A700C1122A /* TrailerViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TrailerViewController.h; sourceTree = "<group>"; };
 		AA37D7F6268515A700C1122A /* TrailerViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TrailerViewController.m; sourceTree = "<group>"; };
+		AA37D7F826854D7D00C1122A /* BPostViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BPostViewController.h; sourceTree = "<group>"; };
+		AA37D7F926854D7D00C1122A /* BPostViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BPostViewController.m; sourceTree = "<group>"; };
 		BD2E90BC34B1DD700807B8FF /* Pods_flixappTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_flixappTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DD222A1DC2220A7E85DEB339 /* Pods-flixapp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-flixapp.release.xcconfig"; path = "Target Support Files/Pods-flixapp/Pods-flixapp.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -222,6 +225,8 @@
 				AA285A6A2683F09000580159 /* MoviesGridViewController.m */,
 				AA37D7F5268515A700C1122A /* TrailerViewController.h */,
 				AA37D7F6268515A700C1122A /* TrailerViewController.m */,
+				AA37D7F826854D7D00C1122A /* BPostViewController.h */,
+				AA37D7F926854D7D00C1122A /* BPostViewController.m */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -470,6 +475,7 @@
 				AA285A6E2683F2F700580159 /* MovieCollectionCell.m in Sources */,
 				AA285A2A26838DA700580159 /* SceneDelegate.m in Sources */,
 				AA285A6226839A2500580159 /* MoviesViewController.m in Sources */,
+				AA37D7FA26854D7D00C1122A /* BPostViewController.m in Sources */,
 				AA37D7F7268515A700C1122A /* TrailerViewController.m in Sources */,
 				AA285A6B2683F09000580159 /* MoviesGridViewController.m in Sources */,
 			);

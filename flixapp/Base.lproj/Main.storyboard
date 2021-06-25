@@ -29,7 +29,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="169"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="yB4-HI-9d7">
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="poster-placeholder" translatesAutoresizingMaskIntoConstraints="NO" id="yB4-HI-9d7">
                                                     <rect key="frame" x="0.0" y="0.0" width="118" height="169"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 </imageView>
@@ -54,7 +54,7 @@
                                             <outlet property="posterView" destination="yB4-HI-9d7" id="6sh-MQ-2yF"/>
                                             <outlet property="synopsisLabel" destination="Sfc-py-T6s" id="jx1-Zb-iU3"/>
                                             <outlet property="titleLabel" destination="FaO-Hl-oCF" id="lZn-2I-RSq"/>
-                                            <segue destination="xk9-7a-m3z" kind="show" id="hHJ-B6-0Uk"/>
+                                            <segue destination="B0l-WD-J5d" kind="presentation" modalPresentationStyle="fullScreen" modalTransitionStyle="flipHorizontal" id="UtG-Nq-VH2"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -76,7 +76,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-794" y="287"/>
+            <point key="canvasLocation" x="-332" y="408"/>
         </scene>
         <!--Collection-->
         <scene sceneID="fJq-1V-fsP">
@@ -121,7 +121,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="111" height="201"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="1Fg-j5-BGA">
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="poster-placeholder" translatesAutoresizingMaskIntoConstraints="NO" id="1Fg-j5-BGA">
                                                     <rect key="frame" x="0.0" y="0.0" width="111" height="201"/>
                                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                 </imageView>
@@ -163,8 +163,9 @@
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="13j-bc-A89">
                                         <rect key="frame" x="0.0" y="-88" width="414" height="311"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <gestureRecognizers/>
                                     </imageView>
-                                    <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="YE2-3Z-eW8">
+                                    <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="poster-placeholder" translatesAutoresizingMaskIntoConstraints="NO" id="YE2-3Z-eW8">
                                         <rect key="frame" x="20" y="111" width="139" height="190"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <gestureRecognizers/>
@@ -182,6 +183,7 @@
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Luca" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sUi-pN-u1r">
                                         <rect key="frame" x="167" y="252" width="202" height="49"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <gestureRecognizers/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
@@ -211,7 +213,7 @@
                     </connections>
                 </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="180" y="287"/>
+            <point key="canvasLocation" x="648" y="797"/>
         </scene>
         <!--Trailer View Controller-->
         <scene sceneID="ssv-y8-S5U">
@@ -230,17 +232,63 @@
                                     <wkPreferences key="preferences"/>
                                 </wkWebViewConfiguration>
                             </wkWebView>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="sCA-lD-1ZD">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                                <items>
+                                    <barButtonItem title="Cancel" id="UQF-eU-1nB">
+                                        <connections>
+                                            <action selector="cancelButton:" destination="3hQ-zq-jjT" id="QDJ-CU-p03"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </items>
+                            </toolbar>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="CY6-W5-ZJM"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
+                    <toolbarItems/>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="trailerView" destination="KNn-sK-MeN" id="NIl-q8-a5l"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="U3N-Vo-KT1" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="179.71014492753625" y="975.66964285714278"/>
+            <point key="canvasLocation" x="-794" y="1015"/>
+        </scene>
+        <!--Post View Controller-->
+        <scene sceneID="Ikw-8X-gMx">
+            <objects>
+                <viewController id="B0l-WD-J5d" customClass="BPostViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="aoS-UR-Lcw">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="poster-placeholder" translatesAutoresizingMaskIntoConstraints="NO" id="nJl-P3-IVM">
+                                <rect key="frame" x="0.0" y="146" width="414" height="604"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zln-0h-Xmm">
+                                <rect key="frame" x="372" y="146" width="42" height="41"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" image="xmark.circle" catalog="system"/>
+                                <connections>
+                                    <action selector="cancelButton:" destination="B0l-WD-J5d" eventType="touchUpInside" id="hrc-gk-A2R"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="8xm-vw-yQU"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </view>
+                    <connections>
+                        <outlet property="bigPoster" destination="nJl-P3-IVM" id="7D0-QZ-tIa"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="24b-l9-Pws" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1023.1884057971015" y="-403.125"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="wBb-Ni-ibt">
@@ -280,10 +328,9 @@
             <point key="canvasLocation" x="-86" y="-444"/>
         </scene>
     </scenes>
-    <inferredMetricsTieBreakers>
-        <segue reference="hHJ-B6-0Uk"/>
-    </inferredMetricsTieBreakers>
     <resources>
+        <image name="poster-placeholder" width="300" height="450"/>
+        <image name="xmark.circle" catalog="system" width="128" height="121"/>
         <systemColor name="labelColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

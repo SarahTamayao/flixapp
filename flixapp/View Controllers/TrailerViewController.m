@@ -55,6 +55,9 @@
     // Do any additional setup after loading the view
     
 }
+- (IBAction)cancelButton:(UIBarButtonItem *)sender {
+    [self dismissViewControllerAnimated:YES completion:nil];
+}
 
 
 /*

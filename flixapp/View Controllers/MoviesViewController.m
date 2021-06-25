@@ -9,6 +9,7 @@
 #import "MovieCell.h"
 #import "UIImageView+AFNetworking.h"
 #import "DetailsViewController.h";
+#import "BPostViewController.h"
 
 @interface MoviesViewController () <UITableViewDataSource,UITableViewDelegate>
 @property (strong, nonatomic) IBOutlet UITableView *tableView;
@@ -164,12 +165,15 @@
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     // Get the new view controller using [segue destinationViewController].
     // Pass the selected object to the new view controller.
+
     UITableViewCell *tappedCell = sender;
     NSIndexPath *indexPath = [self.tableView indexPathForCell:tappedCell];
     NSDictionary *movie = self.filtermovies[indexPath.row];
-    DetailsViewController *detailViewController = [segue destinationViewController];
-    detailViewController.movie = movie;
+    BPostViewController *bpostViewController = [segue destinationViewController];
+    bpostViewController.movie = movie;
     //NSLog(@"Tapping on a movie!");
+    
+   
 }
 
 
