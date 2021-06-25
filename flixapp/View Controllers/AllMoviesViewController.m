@@ -42,6 +42,14 @@
     [self fetchMovies1];
     [self fetchMovies2];
     [self fetchMovies3];
+    self.navigationItem.title = @"WHAT TO WATCH";
+    UINavigationBar *navigationBar = self.navigationController.navigationBar;
+    navigationBar.backgroundColor = [[UIColor redColor] colorWithAlphaComponent:0.7];
+    NSShadow *shadow = [NSShadow new];
+        shadow.shadowColor = [[UIColor grayColor] colorWithAlphaComponent:0.85];
+        shadow.shadowOffset = CGSizeMake(3, 3);
+        shadow.shadowBlurRadius = 4;
+    navigationBar.titleTextAttributes = @{NSFontAttributeName : [UIFont fontWithName:@"Futura" size:30], NSForegroundColorAttributeName : [UIColor blackColor],NSShadowAttributeName : shadow};
     
     UICollectionViewFlowLayout *layout = (UICollectionViewFlowLayout *) self.popular.collectionViewLayout;
     
