@@ -22,6 +22,11 @@
 		AA285A682683D26900580159 /* DetailsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AA285A672683D26900580159 /* DetailsViewController.m */; };
 		AA285A6B2683F09000580159 /* MoviesGridViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AA285A6A2683F09000580159 /* MoviesGridViewController.m */; };
 		AA285A6E2683F2F700580159 /* MovieCollectionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = AA285A6D2683F2F700580159 /* MovieCollectionCell.m */; };
+		AA2F64922686798600959671 /* AllMoviesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AA2F64912686798600959671 /* AllMoviesViewController.m */; };
+		AA2F649526867F0B00959671 /* NPCell.m in Sources */ = {isa = PBXBuildFile; fileRef = AA2F649426867F0B00959671 /* NPCell.m */; };
+		AA2F649826867F1800959671 /* PCell.m in Sources */ = {isa = PBXBuildFile; fileRef = AA2F649726867F1800959671 /* PCell.m */; };
+		AA2F649B26867F2300959671 /* TRCell.m in Sources */ = {isa = PBXBuildFile; fileRef = AA2F649A26867F2300959671 /* TRCell.m */; };
+		AA2F649E26867F2F00959671 /* UCell.m in Sources */ = {isa = PBXBuildFile; fileRef = AA2F649D26867F2F00959671 /* UCell.m */; };
 		AA37D7F7268515A700C1122A /* TrailerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AA37D7F6268515A700C1122A /* TrailerViewController.m */; };
 		AA37D7FA26854D7D00C1122A /* BPostViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AA37D7F926854D7D00C1122A /* BPostViewController.m */; };
 		C8B9400ADDC7BFF291004367 /* Pods_flixapp_flixappUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7A1DE637DF10C992036E83BE /* Pods_flixapp_flixappUITests.framework */; };
@@ -78,6 +83,16 @@
 		AA285A6A2683F09000580159 /* MoviesGridViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MoviesGridViewController.m; sourceTree = "<group>"; };
 		AA285A6C2683F2F700580159 /* MovieCollectionCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MovieCollectionCell.h; sourceTree = "<group>"; };
 		AA285A6D2683F2F700580159 /* MovieCollectionCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MovieCollectionCell.m; sourceTree = "<group>"; };
+		AA2F64902686798600959671 /* AllMoviesViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AllMoviesViewController.h; sourceTree = "<group>"; };
+		AA2F64912686798600959671 /* AllMoviesViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AllMoviesViewController.m; sourceTree = "<group>"; };
+		AA2F649326867F0B00959671 /* NPCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NPCell.h; sourceTree = "<group>"; };
+		AA2F649426867F0B00959671 /* NPCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NPCell.m; sourceTree = "<group>"; };
+		AA2F649626867F1800959671 /* PCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PCell.h; sourceTree = "<group>"; };
+		AA2F649726867F1800959671 /* PCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PCell.m; sourceTree = "<group>"; };
+		AA2F649926867F2300959671 /* TRCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TRCell.h; sourceTree = "<group>"; };
+		AA2F649A26867F2300959671 /* TRCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TRCell.m; sourceTree = "<group>"; };
+		AA2F649C26867F2F00959671 /* UCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UCell.h; sourceTree = "<group>"; };
+		AA2F649D26867F2F00959671 /* UCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UCell.m; sourceTree = "<group>"; };
 		AA37D7F5268515A700C1122A /* TrailerViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TrailerViewController.h; sourceTree = "<group>"; };
 		AA37D7F6268515A700C1122A /* TrailerViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TrailerViewController.m; sourceTree = "<group>"; };
 		AA37D7F826854D7D00C1122A /* BPostViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BPostViewController.h; sourceTree = "<group>"; };
@@ -210,6 +225,14 @@
 				AA285A642683BB9300580159 /* MovieCell.m */,
 				AA285A6C2683F2F700580159 /* MovieCollectionCell.h */,
 				AA285A6D2683F2F700580159 /* MovieCollectionCell.m */,
+				AA2F649326867F0B00959671 /* NPCell.h */,
+				AA2F649426867F0B00959671 /* NPCell.m */,
+				AA2F649626867F1800959671 /* PCell.h */,
+				AA2F649726867F1800959671 /* PCell.m */,
+				AA2F649926867F2300959671 /* TRCell.h */,
+				AA2F649A26867F2300959671 /* TRCell.m */,
+				AA2F649C26867F2F00959671 /* UCell.h */,
+				AA2F649D26867F2F00959671 /* UCell.m */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -227,6 +250,8 @@
 				AA37D7F6268515A700C1122A /* TrailerViewController.m */,
 				AA37D7F826854D7D00C1122A /* BPostViewController.h */,
 				AA37D7F926854D7D00C1122A /* BPostViewController.m */,
+				AA2F64902686798600959671 /* AllMoviesViewController.h */,
+				AA2F64912686798600959671 /* AllMoviesViewController.m */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -471,7 +496,12 @@
 				AA285A2726838DA700580159 /* AppDelegate.m in Sources */,
 				AA285A652683BB9300580159 /* MovieCell.m in Sources */,
 				AA285A3826838DA800580159 /* main.m in Sources */,
+				AA2F649E26867F2F00959671 /* UCell.m in Sources */,
 				AA285A682683D26900580159 /* DetailsViewController.m in Sources */,
+				AA2F64922686798600959671 /* AllMoviesViewController.m in Sources */,
+				AA2F649B26867F2300959671 /* TRCell.m in Sources */,
+				AA2F649526867F0B00959671 /* NPCell.m in Sources */,
+				AA2F649826867F1800959671 /* PCell.m in Sources */,
 				AA285A6E2683F2F700580159 /* MovieCollectionCell.m in Sources */,
 				AA285A2A26838DA700580159 /* SceneDelegate.m in Sources */,
 				AA285A6226839A2500580159 /* MoviesViewController.m in Sources */,

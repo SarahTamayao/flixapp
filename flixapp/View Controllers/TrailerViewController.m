@@ -16,7 +16,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    NSString *baseCode = [NSString stringWithFormat:@"%@", self.movie[@"id"]];;
+    NSString *baseCode = [NSString stringWithFormat:@"%@", self.movie[@"id"]];
     NSString *apiStart = @"https://api.themoviedb.org/3/movie/";
     NSString *apibaseURL = [apiStart stringByAppendingString:baseCode];
     NSString *apiendURL = @"/videos?api_key=a07e22bc18f5cb106bfe4cc1f83ad8ed&language=en-US";
