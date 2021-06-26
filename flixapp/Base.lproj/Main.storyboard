@@ -99,7 +99,7 @@
         <scene sceneID="oIi-rj-zcW">
             <objects>
                 <navigationController id="Q2L-nL-uIC" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Movies" selectedImage="ticket_tabbar_icon" id="3KA-aH-LDc"/>
+                    <tabBarItem key="tabBarItem" title="Movies" image="ticket_tabbar_icon" selectedImage="ticket_tabbar_icon" id="3KA-aH-LDc"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="Lye-wV-daW">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -115,7 +115,6 @@
         <!--What to Watch-->
         <scene sceneID="BL1-1B-YOX">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="pEx-Di-Brx" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <viewController id="w0r-Qr-mcW" customClass="AllMoviesViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="dVG-O2-M02">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
@@ -289,6 +288,7 @@
                         <outlet property="upcoming" destination="Bpv-09-JGD" id="xwx-2F-1pR"/>
                     </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="pEx-Di-Brx" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3511.594202898551" y="70.982142857142847"/>
         </scene>
@@ -498,8 +498,8 @@
                     </tabBar>
                     <connections>
                         <segue destination="kos-os-Zyd" kind="relationship" relationship="viewControllers" id="bkc-jA-yc3"/>
-                        <segue destination="bch-LV-hzj" kind="relationship" relationship="viewControllers" id="AmO-63-ex7"/>
                         <segue destination="Q2L-nL-uIC" kind="relationship" relationship="viewControllers" id="7QN-bt-YZV"/>
+                        <segue destination="bch-LV-hzj" kind="relationship" relationship="viewControllers" id="AmO-63-ex7"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1d8-om-SpF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
