@@ -27,7 +27,7 @@ The following **optional** features are implemented:
 - [x] Customize the navigation bar.
 - [x] Customize the UI.
 - [ ] User can view the app on various device sizes and orientations.
-- [ ] Run your app on a real device.
+- [x] Run your app on a real device.
 
 The following **additional** features are implemented:
 
@@ -36,8 +36,8 @@ The following **additional** features are implemented:
 
 Please list two areas of the assignment you'd like to **discuss further with your peers** during the next class (examples include better ways to implement something, how to extend your app in certain ways, etc):
 
-1.
-2.
+1. Using a collection view inside of a table view
+2. Rating feature
 
 ## Video Walkthrough
 
@@ -49,6 +49,7 @@ Here's a walkthrough of implemented user stories:
 ## Notes
 
 Describe any challenges encountered while building the app.
+Had some issues with sizing in collection view
 
 ## Credits
 
