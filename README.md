@@ -42,14 +42,6 @@ Please list two areas of the assignment you'd like to **discuss further with you
 
 Here's a walkthrough of implemented user stories:
 
-<img src='https://github.com/gss223/flixapp/blob/main/gif1.gif' title='Video Walkthrough Pt.1' width='' alt='Video Walkthrough 1' />
-
-<img src='https://github.com/gss223/flixapp/blob/main/gif2.gif' title='Video Walkthrough Pt.2' width='' alt='Video Walkthrough2' />
-
-<img src='https://github.com/gss223/flixapp/blob/main/gif3.gif' title='Video Walkthrough Pt.3' width='' alt='Video Walkthrough3' />
-
-<img src='https://github.com/gss223/flixapp/blob/main/loading.gif' title='Video Walkthrough Loading Part' width='' alt='Video Walkthrough4' />
-
 
 ## Notes
 
